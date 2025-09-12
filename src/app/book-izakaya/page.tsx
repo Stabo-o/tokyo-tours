@@ -68,7 +68,7 @@ export default function BookIzakaya() {
               <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg">
                 <h3 className="text-2xl font-bold mb-3">About the Tour</h3>
                 <p className="text-sm leading-relaxed mb-3">
-                  Let me take you to my favorite neighborhoods where we'll find small Izakaya's to stop at 
+                  Let me take you to my favorite neighborhoods where we&apos;ll find small Izakaya&apos;s to stop at 
                   for some drinks and food.
                 </p>
                <ul className="text-sm list-disc list-inside space-y-2 mb-3">

@@ -70,7 +70,7 @@ export default function BookKamakura() {
                 <h3 className="text-2xl font-bold mb-3">About the Tour</h3>
                 <p className="text-sm leading-relaxed mb-3">
                   Kamakura is probably the best daytrip you can do from Tokyo.
-                  After a one hour train ride we'll go around the shrines and temples of this beautiful seaside town.
+                  After a one hour train ride we&apos;ll go around the shrines and temples of this beautiful seaside town.
                 </p>
                 <ul className="text-sm list-disc list-inside space-y-2 mb-3">
                   <li>Duration: 8 hours</li>
@@ -111,7 +111,7 @@ export default function BookKamakura() {
               <div className="bg-white/85 text-gray-900 p-5 rounded-xl shadow-lg">
                 <h3 className="text-xl font-bold mb-2">About the Tour</h3>
                 <p className="text-sm leading-relaxed">
-                  Explore Kamakura’s temples, shrines, and seaside. Duration 8 hours.
+                  Explore Kamakura&apos;s temples, shrines, and seaside. Duration 8 hours.
                 </p>
               </div>
             </div>
