@@ -19,7 +19,7 @@ export default function BookKamakura() {
       {/* Header */}
       <header className="relative z-10 w-full flex items-center justify-between px-6 py-4 bg-black/50 backdrop-blur-sm">
         <h1 className="text-xl md:text-2xl font-bold text-white tracking-wide">
-          notasalaryman Japan Tours
+          notasalaryman Tokyo Tours
         </h1>
 
         <nav className="flex gap-6 text-white/90 text-sm md:text-base">
@@ -62,24 +62,50 @@ export default function BookKamakura() {
             </div>
           </div>
 
-          {/* About card */}
-          <div className="lg:relative w-full lg:w-80">
-            <div className="hidden lg:block lg:sticky lg:top-[20vh]">
-              <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg w-72">
+          {/* Right column: About + Includes/Does Not Include */}
+          <div className="lg:relative w-full lg:w-96 flex flex-col space-y-6">
+            {/* About This Tour */}
+            <div className="hidden lg:block lg:top-[15vh]">
+              <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg">
                 <h3 className="text-2xl font-bold mb-3">About the Tour</h3>
                 <p className="text-sm leading-relaxed mb-3">
-                  ---
+                  Kamakura is probably the best daytrip you can do from Tokyo.
+                  After a one hour train ride we'll go around the shrines and temples of this beautiful seaside town.
                 </p>
                 <ul className="text-sm list-disc list-inside space-y-2 mb-3">
                   <li>Duration: 8 hours</li>
-                  <li>Price:¥40,000 for 2 people</li>
-                  <li>¥5,000 per person after that</li>
-                  <li>For groups over 6 people, contact me at notasalaryman@gmail.com</li>
+                  <li>Price: ¥40,000 for 2 people.</li>
+                  <li>¥5,000/person after that.</li>
+                  <li>For groups over 6 people, contact me at tours@notasalaryman.com</li>
                 </ul>
-                <p className="text-xs text-gray-600">Includes temple & shrine visits</p>
               </div>
             </div>
 
+            {/* Includes / Does Not Include */}
+            <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg w-full lg:w-[40rem]">
+              <div className="grid grid-cols-2 gap-6">
+                {/* Includes */}
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Includes</h4>
+                  <ul className="text-sm list-disc list-inside space-y-1">
+                    <li>Pick up at your hotel in the morning</li>
+                    <li>Fully private experience around Kamakura</li>
+                    <li>Local recommendations for your trip</li>
+                  </ul>
+                </div>
+
+                {/* Does Not Include */}
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Does Not Include</h4>
+                  <ul className="text-sm list-disc list-inside space-y-1">
+                    <li>Food &amp; drinks</li>
+                    <li>Transportation costs</li>
+                    <li>Temples &amp; shrines entry fee</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
             {/* Mobile stacked */}
             <div className="lg:hidden mt-6 w-full">
               <div className="bg-white/85 text-gray-900 p-5 rounded-xl shadow-lg">

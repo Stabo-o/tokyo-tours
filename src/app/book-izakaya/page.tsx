@@ -18,7 +18,7 @@ export default function BookIzakaya() {
       {/* Header */}
       <header className="relative z-10 w-full flex items-center justify-between px-6 py-4 bg-black/50 backdrop-blur-sm">
         <h1 className="text-xl md:text-2xl font-bold text-white tracking-wide">
-          notasalaryman Japan Tours
+          notasalaryman Tokyo Tours
         </h1>
 
         <nav className="flex gap-6 text-white/90 text-sm md:text-base">
@@ -61,21 +61,46 @@ export default function BookIzakaya() {
             </div>
           </div>
 
-          {/* About card */}
-          <div className="lg:relative w-full lg:w-80">
-            <div className="hidden lg:block lg:sticky lg:top-[20vh]">
-              <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg w-72">
+          {/* Right column: About + Includes/Does Not Include */}
+          <div className="lg:relative w-full lg:w-96 flex flex-col space-y-6">
+            {/* About This Tour */}
+            <div className="hidden lg:block lg:top-[15vh]">
+              <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg">
                 <h3 className="text-2xl font-bold mb-3">About the Tour</h3>
                 <p className="text-sm leading-relaxed mb-3">
-                  ---
+                  Let me take you to my favorite neighborhoods where we'll find small Izakaya's to stop at 
+                  for some drinks and food.
                 </p>
-                <ul className="text-sm list-disc list-inside space-y-2 mb-3">
+               <ul className="text-sm list-disc list-inside space-y-2 mb-3">
                   <li>Duration: 3 hours</li>
                   <li>Price: ¥20,000 for 2 people</li>
-                  <li>¥3000/person after that</li>
+                  <li>¥5000/person after that</li>
                   <li>Up to 4 people</li>
                 </ul>
                 <p className="text-xs text-gray-600">For guests 20+ (legal drinking age)</p>
+              </div>
+            </div>
+
+            {/* Includes / Does Not Include */}
+            <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg w-full lg:w-[40rem]">
+              <div className="grid grid-cols-2 gap-6">
+                {/* Includes */}
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Includes</h4>
+                  <ul className="text-sm list-disc list-inside space-y-1">
+                    <li>Pick up at your hotel</li>
+                    <li>A private experience you won&apos;t forget</li>
+                  </ul>
+                </div>
+
+                {/* Does Not Include */}
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Does Not Include</h4>
+                  <ul className="text-sm list-disc list-inside space-y-1">
+                    <li>Food &amp; drinks</li>
+                    <li>Transportation costs</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -84,7 +109,7 @@ export default function BookIzakaya() {
               <div className="bg-white/85 text-gray-900 p-5 rounded-xl shadow-lg">
                 <h3 className="text-xl font-bold mb-2">About the Tour</h3>
                 <p className="text-sm leading-relaxed">
-                  Discover Tokyo’s backstreets and izakayas. Duration 3 hours.
+                  Discover Tokyo&apos;s backstreets and izakayas. Duration 3 hours.
                 </p>
               </div>
             </div>

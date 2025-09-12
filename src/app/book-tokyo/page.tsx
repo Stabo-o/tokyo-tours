@@ -19,7 +19,7 @@ export default function BookTokyo() {
       {/* Header (same look as homepage) */}
       <header className="relative z-10 w-full flex items-center justify-between px-6 py-4 bg-black/50 backdrop-blur-sm">
         <h1 className="text-xl md:text-2xl font-bold text-white tracking-wide">
-          notasalaryman Japan Tours
+          notasalaryman Tokyo Tours
         </h1>
 
         <nav className="flex gap-6 text-white/90 text-sm md:text-base">
@@ -32,16 +32,15 @@ export default function BookTokyo() {
 
       {/* Main content area */}
       <section className="relative z-10 flex-grow flex items-start justify-center px-4 py-16">
-        <div className="w-full max-w-6xl flex flex-col lg:flex-row items-start lg:items-center gap-8">
-
-          {/* Center column: calendar (always centered horizontally) */}
+        <div className="w-full max-w-6xl flex flex-col lg:flex-row items-start lg:items-start gap-8">
+          {/* Center column: calendar */}
           <div className="w-full flex justify-center">
             <div className="w-full max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
                 Tokyo Private Tour
               </h2>
 
-              {/* Calendly iframe (on top) */}
+              {/* Calendly iframe */}
               <div className="w-full">
                 <iframe
                   title="Calendly — Tokyo Private Tour"
@@ -52,7 +51,7 @@ export default function BookTokyo() {
                 />
               </div>
 
-              {/* Small Back button under calendar */}
+              {/* Back button */}
               <div className="mt-6 flex justify-center">
                 <Link
                   href="/"
@@ -64,32 +63,58 @@ export default function BookTokyo() {
             </div>
           </div>
 
-          {/* Right column: About card (absolute on large screens so it doesn't push the calendar) */}
-          {/* Large screens: absolute floating card; Mobile: show below calendar (stacked) */}
-          <div className="lg:relative w-full lg:w-80">
-            {/* floating card for large screens */}
-            <div className="hidden lg:block lg:sticky lg:top-[20vh]">
-              <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg w-72">
+          {/* Right column: About + Includes/Does Not Include */}
+          <div className="lg:relative w-full lg:w-96 flex flex-col space-y-6">
+            {/* About This Tour */}
+            <div className="hidden lg:block lg:top-[15vh]">
+              <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg">
                 <h3 className="text-2xl font-bold mb-3">About the Tour</h3>
                 <p className="text-sm leading-relaxed mb-3">
-                  ---
+                  Private tours of Tokyo&apos;s must sees to make sure you don&apos;t miss anything.
+                  This way you can spend your other days in town discovering lesser known neighborhoods.
+                  I&apos;ll give you as many recommendations as I can for the rest of your trip!
                 </p>
                 <ul className="text-sm list-disc list-inside space-y-2 mb-3">
                   <li>Duration: 8 hours</li>
                   <li>Price: ¥35,000 for 2 people.</li>
                   <li>¥5,000/person after that.</li>
-                  <li>For groups over 6 people, contact me at notasalaryman@gmail.com</li>
+                  <li>For groups over 6 people, contact me at tours@notasalaryman.com</li>
                 </ul>
-                <p className="text-xs text-gray-600">Bring comfortable shoes!</p>
               </div>
             </div>
 
-            {/* stacked card for mobile */}
+            {/* Includes / Does Not Include */}
+            <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg w-full lg:w-[40rem]">
+              <div className="grid grid-cols-2 gap-6">
+                {/* Includes */}
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Includes</h4>
+                  <ul className="text-sm list-disc list-inside space-y-1">
+                    <li>Pick up at your hotel in the morning</li>
+                    <li>Fully private experience around the city</li>
+                    <li>Local recommendations for your trip</li>
+                  </ul>
+                </div>
+
+                {/* Does Not Include */}
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Does Not Include</h4>
+                  <ul className="text-sm list-disc list-inside space-y-1">
+                    <li>Food &amp; drinks</li>
+                    <li>Transportation costs</li>
+                    <li>Personal expenses</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile stacked About card */}
             <div className="lg:hidden mt-6 w-full">
               <div className="bg-white/85 text-gray-900 p-5 rounded-xl shadow-lg">
                 <h3 className="text-xl font-bold mb-2">About the Tour</h3>
                 <p className="text-sm leading-relaxed">
-                  Private, flexible Tokyo tours, tailored to your interests. Duration 8 hours.
+                  Private tours of Tokyo&apos;s must sees to make sure you don&apos;t miss anything.
+                  This way you can spend your other days in town discovering lesser known neighborhoods. Duration 8 hours.
                 </p>
               </div>
             </div>
@@ -97,9 +122,9 @@ export default function BookTokyo() {
         </div>
       </section>
 
-      {/* Footer (same as homepage) */}
+      {/* Footer */}
       <footer className="relative z-10 w-full py-6 flex flex-col items-center text-white text-sm sm:text-base bg-black/50 backdrop-blur-sm">
-        <p className="mb-2">© {new Date().getFullYear()} notasalaryman Japan Tours</p>
+        <p className="mb-2">© {new Date().getFullYear()} notasalaryman Tokyo Tours</p>
 
         <div className="flex gap-4 mb-3">
           <Link href="/disclosure" className="hover:underline">
@@ -112,13 +137,28 @@ export default function BookTokyo() {
         </div>
 
         <div className="flex gap-6 mt-2">
-          <a href="https://instagram.com/notasalaryman" target="_blank" rel="noreferrer" className="hover:opacity-70">
+          <a
+            href="https://instagram.com/notasalaryman"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:opacity-70"
+          >
             <FaInstagram size={22} className="text-white" />
           </a>
-          <a href="https://tiktok.com/@notasalaryman" target="_blank" rel="noreferrer" className="hover:opacity-70">
+          <a
+            href="https://tiktok.com/@notasalaryman"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:opacity-70"
+          >
             <FaTiktok size={22} className="text-white" />
           </a>
-          <a href="https://youtube.com/@notasalaryman" target="_blank" rel="noreferrer" className="hover:opacity-70">
+          <a
+            href="https://youtube.com/@notasalaryman"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:opacity-70"
+          >
             <FaYoutube size={22} className="text-white" />
           </a>
         </div>

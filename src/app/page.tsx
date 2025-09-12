@@ -21,7 +21,7 @@ const tours = [
   },
   {
     name: "Izakaya Private Experience",
-    description: "Join me for an evening stroll through my favorite neighborhoods and enjoy the Izakaya life.",
+    description: "Join me for an evening stroll through my favorite neighborhoods and enjoy nice food and drinks.",
     price: "From ¥18,000 / 3 hours",
     link: "/book-izakaya",
     image: "/izakaya-tour.jpg",
@@ -44,7 +44,7 @@ export default function Home() {
       {/* Header */}
       <header className="relative z-10 w-full flex items-center justify-between px-6 py-4 bg-black/50 backdrop-blur-sm">
         <h1 className="text-xl md:text-2xl font-bold text-white tracking-wide">
-          NotASalaryman Japan Tours
+          notasalaryman Tokyo Tours
         </h1>
         <nav className="flex gap-6 text-white/90 text-sm md:text-base">
           <Link href="/" className="hover:text-white">Home</Link>
@@ -88,20 +88,20 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="relative z-10 w-full py-6 flex flex-col items-center text-white text-sm sm:text-base bg-black/50 backdrop-blur-sm">
-        <p className="mb-2">© {new Date().getFullYear()} NotASalaryman Japan Tours</p>
+        <p className="mb-2">© {new Date().getFullYear()} notasalaryman Tokyo Tours</p>
         <div className="flex gap-4 mb-3">
           <a href="/disclosure" className="hover:underline">Commerce Disclosure</a>
           <span className="text-white/60">|</span>
           <a href="/cancellation" className="hover:underline">Cancellation & Refund Policy</a>
         </div>
         <div className="flex gap-6 mt-2">
-          <a href="https://instagram.com/yourusername" target="_blank" className="hover:opacity-70 transition">
+          <a href="https://instagram.com/notasalaryman" target="_blank" className="hover:opacity-70 transition">
             <FaInstagram size={22} className="text-white" />
           </a>
-          <a href="https://tiktok.com/@yourusername" target="_blank" className="hover:opacity-70 transition">
+          <a href="https://tiktok.com/@notasalaryman" target="_blank" className="hover:opacity-70 transition">
             <FaTiktok size={22} className="text-white" />
           </a>
-          <a href="https://youtube.com/@yourusername" target="_blank" className="hover:opacity-70 transition">
+          <a href="https://youtube.com/@notasalaryman" target="_blank" className="hover:opacity-70 transition">
             <FaYoutube size={22} className="text-white" />
           </a>
         </div>

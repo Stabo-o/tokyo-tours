@@ -13,15 +13,13 @@ export default function Disclosure() {
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 z-0" />
 
       {/* Header */}
       <header className="relative z-10 w-full flex items-center justify-between px-6 py-4 bg-black/50 backdrop-blur-sm">
         <h1 className="text-xl md:text-2xl font-bold text-white tracking-wide">
-          notasalaryman Japan Tours
+          notasalaryman Tokyo Tours
         </h1>
-
         <nav className="flex gap-6 text-white/90 text-sm md:text-base">
           <Link href="/">Home</Link>
           <Link href="/book-tokyo">Tokyo</Link>
@@ -31,30 +29,57 @@ export default function Disclosure() {
       </header>
 
       {/* Content */}
-      <section className="relative z-10 flex-grow flex items-start justify-center px-4 py-16">
-        <div className="w-full max-w-4xl bg-white/85 text-gray-900 p-8 rounded-xl shadow-lg">
-          <h2 className="text-3xl font-bold mb-6 text-center">
-            Commerce Disclosure / 特定商取引法に基づく表記
-          </h2>
+      <section className="relative z-10 flex-grow flex justify-center px-4 py-16">
+        <div className="w-full max-w-4xl bg-white/90 p-8 rounded-xl shadow-lg text-gray-900">
+          <h2 className="text-3xl font-bold mb-6 text-center">Commerce Disclosure</h2>
 
-          <div className="space-y-4 text-sm">
-            <p><strong>Seller / 販売者:</strong> Your Name or Company</p>
-            <p><strong>Address / 住所:</strong> Your Address in Japan</p>
-            <p><strong>Phone / 電話番号:</strong> +81-XX-XXXX-XXXX</p>
-            <p><strong>Email / メールアドレス:</strong> info@yourdomain.com</p>
-            <p><strong>Product / 商品:</strong> Private Tours in Tokyo and Kamakura</p>
-            <p><strong>Price / 価格:</strong> As listed on the booking page</p>
-            <p><strong>Payment Method / 支払い方法:</strong> Stripe (Credit Card)</p>
-            <p><strong>Delivery / 引渡し時期:</strong> Service is delivered on booked date</p>
-            <p><strong>Cancellation / キャンセルについて:</strong> See our <Link href="/cancellation" className="underline">cancellation policy</Link></p>
-            <p><strong>Refund / 返金について:</strong> Refunds only as per policy</p>
-          </div>
+          <section className="mb-4">
+            <h3 className="font-semibold text-xl mb-2">Business Name</h3>
+            <p>notasalaryman Tokyo Tours</p>
+          </section>
+
+          <section className="mb-4">
+            <h3 className="font-semibold text-xl mb-2">Address</h3>
+            <p>We will disclose without delay if necessary.</p>
+          </section>
+
+          <section className="mb-4">
+            <h3 className="font-semibold text-xl mb-2">Email</h3>
+            <p>tours@notasalaryman.com</p>
+          </section>
+
+          <section className="mb-4">
+            <h3 className="font-semibold text-xl mb-2">Phone Number</h3>
+            <p>We will disclose without delay if necessary.</p>
+          </section>
+
+          <section className="mb-4">
+            <h3 className="font-semibold text-xl mb-2">Payment Methods - Payment Period</h3>
+            <p>Credit card payments via Stripe.</p>
+            <p>Credit card payments are processed immediately upon booking.</p>
+          </section>
+
+          <section className="mb-4">
+            <h3 className="font-semibold text-xl mb-2">Payment Period</h3>
+            <p>Credit card payments are processed immediately upon booking.</p>
+          </section>
+
+          <section className="mb-4">
+            <h3 className="font-semibold text-xl mb-2">Services</h3>
+            <p>Private tours in Tokyo, Kamakura, and Izakaya experiences in Tokyo neighborhoods.</p>
+          </section>
+
+          <section className="mb-4">
+            <h3 className="font-semibold text-xl mb-2">Operations Director</h3>
+            <p>Louis Biancardini</p>
+          </section>
+
         </div>
       </section>
 
       {/* Footer */}
       <footer className="relative z-10 w-full py-6 flex flex-col items-center text-white text-sm sm:text-base bg-black/50 backdrop-blur-sm">
-        <p className="mb-2">© {new Date().getFullYear()} notasalaryman Japan Tours</p>
+        <p className="mb-2">© {new Date().getFullYear()} notasalaryman Tokyo Tours</p>
 
         <div className="flex gap-4 mb-3">
           <Link href="/disclosure" className="hover:underline">

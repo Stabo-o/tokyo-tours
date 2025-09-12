@@ -8,7 +8,7 @@ export default function Cancellation() {
     <main
       className="relative min-h-screen flex flex-col"
       style={{
-        backgroundImage: "url('/disclosure.jpg')",
+        backgroundImage: "url('/policy.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -19,7 +19,7 @@ export default function Cancellation() {
       {/* Header */}
       <header className="relative z-10 w-full flex items-center justify-between px-6 py-4 bg-black/50 backdrop-blur-sm">
         <h1 className="text-xl md:text-2xl font-bold text-white tracking-wide">
-          notasalaryman Japan Tours
+          notasalaryman Tokyo Tours
         </h1>
 
         <nav className="flex gap-6 text-white/90 text-sm md:text-base">
@@ -43,18 +43,17 @@ export default function Cancellation() {
               <li>Cancellations more than 7 days before the tour: Full refund.</li>
               <li>Cancellations between 7 days and 48 hours: 50% refund.</li>
               <li>Cancellations within 48 hours: No refund.</li>
+              <li>Contact me at tours@notasalaryman.com for any inquiry.</li>
               <li>Refunds are processed within 7 business days.</li>
             </ul>
-            <p className="text-sm text-gray-600 mt-4">
-              For group bookings, please contact me directly for any special arrangements.
-            </p>
+
           </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="relative z-10 w-full py-6 flex flex-col items-center text-white text-sm sm:text-base bg-black/50 backdrop-blur-sm">
-        <p className="mb-2">© {new Date().getFullYear()} notasalaryman Japan Tours</p>
+        <p className="mb-2">© {new Date().getFullYear()} notasalaryman Tokyo Tours</p>
 
         <div className="flex gap-4 mb-3">
           <Link href="/disclosure" className="hover:underline">
