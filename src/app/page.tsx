@@ -1,103 +1,111 @@
-import Image from "next/image";
+"use client";
+
+import Link from "next/link";
+import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
+
+// Tour data
+const tours = [
+  {
+    name: "Tokyo Private Tour",
+    description: "Let me take you to Tokyo must-sees so you're sure not to miss anything.",
+    price: "From ¥35,000 / 8 hours",
+    link: "/book-tokyo",
+    image: "/tokyo-tour.jpg",
+  },
+  {
+    name: "Kamakura Private Tour",
+    description: "Discover temples, shrines, and coastal scenery just an hour away from Tokyo.",
+    price: "From ¥40,000 / 8 hours",
+    link: "/book-kamakura",
+    image: "/kamakura-tour.jpg",
+  },
+  {
+    name: "Izakaya Private Experience",
+    description: "Join me for an evening stroll through my favorite neighborhoods and enjoy the Izakaya life.",
+    price: "From ¥18,000 / 3 hours",
+    link: "/book-izakaya",
+    image: "/izakaya-tour.jpg",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main
+      className="relative min-h-screen flex flex-col justify-between overflow-hidden"
+      style={{
+        backgroundImage: "url('/default-bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+      {/* Header */}
+      <header className="relative z-10 w-full flex items-center justify-between px-6 py-4 bg-black/50 backdrop-blur-sm">
+        <h1 className="text-xl md:text-2xl font-bold text-white tracking-wide">
+          NotASalaryman Japan Tours
+        </h1>
+        <nav className="flex gap-6 text-white/90 text-sm md:text-base">
+          <Link href="/" className="hover:text-white">Home</Link>
+          <Link href="/book-tokyo" className="hover:text-white">Tokyo</Link>
+          <Link href="/book-kamakura" className="hover:text-white">Kamakura</Link>
+          <Link href="/book-izakaya" className="hover:text-white">Izakaya</Link>
+        </nav>
+      </header>
+
+      {/* Tour Cards */}
+      <div className="relative z-10 flex-grow flex items-center px-6 py-8">
+        <div className="mx-auto w-full max-w-6xl">
+          <div className="grid gap-8 md:grid-cols-3">
+            {tours.map((tour) => (
+              <div
+                key={tour.name}
+                className="relative rounded-2xl overflow-hidden shadow-xl group h-72 sm:h-80 md:h-96 lg:h-[28rem]"
+              >
+                <img
+                  src={tour.image}
+                  alt={tour.name}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300"></div>
+                <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                  <h2 className="text-2xl font-bold mb-2">{tour.name}</h2>
+                  <p className="mb-3 text-sm">{tour.description}</p>
+                  <p className="mb-4 font-semibold">{tour.price}</p>
+                  <a
+                    href={tour.link}
+                    className="self-start px-4 py-2 bg-white text-black rounded-xl hover:bg-gray-200 transition"
+                  >
+                    Book Now
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="relative z-10 w-full py-6 flex flex-col items-center text-white text-sm sm:text-base bg-black/50 backdrop-blur-sm">
+        <p className="mb-2">© {new Date().getFullYear()} NotASalaryman Japan Tours</p>
+        <div className="flex gap-4 mb-3">
+          <a href="/disclosure" className="hover:underline">Commerce Disclosure</a>
+          <span className="text-white/60">|</span>
+          <a href="/cancellation" className="hover:underline">Cancellation & Refund Policy</a>
+        </div>
+        <div className="flex gap-6 mt-2">
+          <a href="https://instagram.com/yourusername" target="_blank" className="hover:opacity-70 transition">
+            <FaInstagram size={22} className="text-white" />
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+          <a href="https://tiktok.com/@yourusername" target="_blank" className="hover:opacity-70 transition">
+            <FaTiktok size={22} className="text-white" />
+          </a>
+          <a href="https://youtube.com/@yourusername" target="_blank" className="hover:opacity-70 transition">
+            <FaYoutube size={22} className="text-white" />
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
       </footer>
-    </div>
+    </main>
   );
 }
