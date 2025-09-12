@@ -37,12 +37,12 @@ export default function Cancellation() {
 
           <div className="space-y-4 text-sm">
             <p>
-              I understand that plans can change. Here's my policy:
+              I understand that plans can change.
             </p>
             <ul className="list-disc list-inside space-y-2">
-              <li>Cancellations more than 48 hours before the tour: Full refund.</li>
-              <li>Cancellations within 48 hours: 50% refund.</li>
-              <li>No-shows: No refund.</li>
+              <li>Cancellations more than 7 days before the tour: Full refund.</li>
+              <li>Cancellations between 7 days and 48 hours: 50% refund.</li>
+              <li>Cancellations within 48 hours: No refund.</li>
               <li>Refunds are processed within 7 business days.</li>
             </ul>
             <p className="text-sm text-gray-600 mt-4">
