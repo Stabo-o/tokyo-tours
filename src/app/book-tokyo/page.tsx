@@ -78,7 +78,7 @@ export default function BookTokyo() {
                   <li>Duration: 8 hours</li>
                   <li>Price: ¥35,000 for 2 people.</li>
                   <li>¥5,000/person after that.</li>
-                  <li>For groups over 6 people, contact me at tours@notasalaryman.com</li>
+                  <li>For groups over 6 people, contact me at notasalaryman@gmail.com</li>
                 </ul>
               </div>
             </div>

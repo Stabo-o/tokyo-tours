@@ -31,47 +31,43 @@ export default function Disclosure() {
       {/* Content */}
       <section className="relative z-10 flex-grow flex justify-center px-4 py-16">
         <div className="w-full max-w-4xl bg-white/90 p-8 rounded-xl shadow-lg text-gray-900">
-          <h2 className="text-3xl font-bold mb-6 text-center">Commerce Disclosure</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">Commerce Disclosure - 特定商取引法に基づく表記</h2>
 
           <section className="mb-4">
-            <h3 className="font-semibold text-xl mb-2">Business Name</h3>
+            <h3 className="font-semibold text-xl mb-2">Business Name / 事業者名</h3>
             <p>notasalaryman Tokyo Tours</p>
+            <p>Operations Director - 代表者 : Louis Michel Jean Bourgogne usage Bourgogne Biancardini</p>
           </section>
 
           <section className="mb-4">
-            <h3 className="font-semibold text-xl mb-2">Address</h3>
+            <h3 className="font-semibold text-xl mb-2">Address / 所在地</h3>
             <p>We will disclose without delay if necessary.</p>
           </section>
 
           <section className="mb-4">
-            <h3 className="font-semibold text-xl mb-2">Email</h3>
-            <p>tours@notasalaryman.com</p>
+            <h3 className="font-semibold text-xl mb-2">Email / メールアドレス</h3>
+            <p>notasalaryman@gmail.com</p>
           </section>
 
           <section className="mb-4">
-            <h3 className="font-semibold text-xl mb-2">Phone Number</h3>
+            <h3 className="font-semibold text-xl mb-2">Phone Number / 電話番号</h3>
             <p>We will disclose without delay if necessary.</p>
           </section>
 
           <section className="mb-4">
-            <h3 className="font-semibold text-xl mb-2">Payment Methods - Payment Period</h3>
+            <h3 className="font-semibold text-xl mb-2">Payment Methods - Payment Period / 代金の支払方法・支払時期</h3>
             <p>Credit card payments via Stripe.</p>
             <p>Credit card payments are processed immediately upon booking.</p>
           </section>
 
           <section className="mb-4">
-            <h3 className="font-semibold text-xl mb-2">Payment Period</h3>
+            <h3 className="font-semibold text-xl mb-2">Payment Period / 支払時期</h3>
             <p>Credit card payments are processed immediately upon booking.</p>
           </section>
 
           <section className="mb-4">
-            <h3 className="font-semibold text-xl mb-2">Services</h3>
+            <h3 className="font-semibold text-xl mb-2">Services / 提供するサービスの内容</h3>
             <p>Private tours in Tokyo, Kamakura, and Izakaya experiences in Tokyo neighborhoods.</p>
-          </section>
-
-          <section className="mb-4">
-            <h3 className="font-semibold text-xl mb-2">Operations Director</h3>
-            <p>Louis Biancardini</p>
           </section>
 
         </div>

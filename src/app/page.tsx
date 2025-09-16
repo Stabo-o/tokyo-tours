@@ -7,7 +7,7 @@ import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 const tours = [
   {
     name: "Tokyo Private Tour",
-    description: "Let me take you to Tokyo must-sees so you&apos;re sure not to miss anything.",
+    description: "Let me take you to Tokyo must-sees so you're sure not to miss anything.",
     price: "From ¥35,000 / 8 hours",
     link: "/book-tokyo",
     image: "/tokyo-tour.jpg",
@@ -22,7 +22,7 @@ const tours = [
   {
     name: "Izakaya Private Experience",
     description: "Join me for an evening stroll through my favorite neighborhoods and enjoy nice food and drinks.",
-    price: "From ¥18,000 / 3 hours",
+    price: "From ¥20,000 / 3 hours",
     link: "/book-izakaya",
     image: "/izakaya-tour.jpg",
   },
