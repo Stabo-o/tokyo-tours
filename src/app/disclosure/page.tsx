@@ -36,7 +36,7 @@ export default function Disclosure() {
           <section className="mb-4">
             <h3 className="font-semibold text-xl mb-2">Business Name / 事業者名</h3>
             <p>notasalaryman Tokyo Tours</p>
-            <p>Operations Director - 代表者 : Louis Michel Jean Bourgogne usage Bourgogne Biancardini</p>
+            <p>Operations Director - 代表者 : LMJ.BUBB</p>
           </section>
 
           <section className="mb-4">
@@ -59,12 +59,7 @@ export default function Disclosure() {
             <p>Credit card payments via Stripe.</p>
             <p>Credit card payments are processed immediately upon booking.</p>
           </section>
-
-          <section className="mb-4">
-            <h3 className="font-semibold text-xl mb-2">Payment Period / 支払時期</h3>
-            <p>Credit card payments are processed immediately upon booking.</p>
-          </section>
-
+          
           <section className="mb-4">
             <h3 className="font-semibold text-xl mb-2">Services / 提供するサービスの内容</h3>
             <p>Private tours in Tokyo, Kamakura, and Izakaya experiences in Tokyo neighborhoods.</p>
