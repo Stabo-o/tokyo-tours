@@ -35,7 +35,7 @@ export default function AboutMe() {
               alt="Louis - Your Guide"
               className="w-36 h-36 rounded-full object-cover shadow-md"
             />
-            <h1 className="text-3xl md:text-4xl font-bold">Hi, I’m Louis</h1>
+            <h1 className="text-3xl md:text-4xl font-bold">Hi,</h1>
             <p className="text-sm md:text-base text-gray-700 max-w-2xl">
               I guide travelers through Tokyo and it&apos;s surroundings. My goal is to help
               you experience Japan the way locals spend their days off.
