@@ -98,7 +98,7 @@ export default function BookKamakura() {
                 Kamakura is my favorite daytrip from Tokyo, all year round.
               </p>
               <p className="text-base mb-2">
-                It has everything, from nature to temples, peaceful and quiet streets, and even the sea, it's the perfect way to escape the city for a day.
+                It has everything, from nature to temples, peaceful and quiet streets, and even the sea, it&apos;s the perfect way to escape the city for a day.
               </p>
               <ul className="text-base list-disc list-inside space-y-2">
                 <li>Duration: 8 hours</li>
