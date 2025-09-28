@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import Link from "next/link";
-import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 
-// Tour data
 const tours = [
   {
     name: "Tokyo Private Tour",
@@ -38,30 +40,23 @@ export default function Home() {
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Header */}
-      <header className="relative z-10 w-full flex items-center justify-between px-6 py-4 bg-black/50 backdrop-blur-sm">
-        <h1 className="text-xl md:text-2xl font-bold text-white tracking-wide">
-          notasalaryman Tokyo Tours
-        </h1>
-        <nav className="flex gap-6 text-white/90 text-sm md:text-base">
-          <Link href="/" className="hover:text-white">Home</Link>
-          <Link href="/book-tokyo" className="hover:text-white">Tokyo</Link>
-          <Link href="/book-kamakura" className="hover:text-white">Kamakura</Link>
-          <Link href="/book-izakaya" className="hover:text-white">Izakaya</Link>
-        </nav>
-      </header>
+      <Header />
 
       {/* Tour Cards */}
-      <div className="relative z-10 flex-grow flex items-center px-6 py-8">
+      <div className="relative z-10 flex-grow px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-6xl">
-          <div className="grid gap-8 md:grid-cols-3">
-            {tours.map((tour) => (
-              <div
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+            {tours.map((tour, i) => (
+              <motion.div
                 key={tour.name}
-                className="relative rounded-2xl overflow-hidden shadow-xl group h-72 sm:h-80 md:h-96 lg:h-[28rem]"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.2, duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative rounded-2xl overflow-hidden shadow-xl group h-64 sm:h-80 md:h-96 lg:h-[28rem]"
               >
                 <img
                   src={tour.image}
@@ -69,43 +64,25 @@ export default function Home() {
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300"></div>
-                <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
-                  <h2 className="text-2xl font-bold mb-2">{tour.name}</h2>
-                  <p className="mb-3 text-sm">{tour.description}</p>
-                  <p className="mb-4 font-semibold">{tour.price}</p>
-                  <a
+                <div className="relative z-10 h-full flex flex-col justify-end p-4 sm:p-6 text-white">
+                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">{tour.name}</h2>
+                  <p className="mb-2 text-sm sm:text-base leading-relaxed">{tour.description}</p>
+                  <p className="mb-3 font-semibold text-sm sm:text-base">{tour.price}</p>
+                  <Link
                     href={tour.link}
-                    className="self-start px-4 py-2 bg-white text-black rounded-xl hover:bg-gray-200 transition"
+                    className="self-start px-3 py-2 sm:px-4 sm:py-2 bg-white text-black rounded-xl hover:bg-gray-200 transition"
                   >
                     Book Now
-                  </a>
+                  </Link>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="relative z-10 w-full py-6 flex flex-col items-center text-white text-sm sm:text-base bg-black/50 backdrop-blur-sm">
-        <p className="mb-2">© {new Date().getFullYear()} notasalaryman Tokyo Tours</p>
-        <div className="flex gap-4 mb-3">
-          <a href="/disclosure" className="hover:underline">Commerce Disclosure</a>
-          <span className="text-white/60">|</span>
-          <a href="/cancellation" className="hover:underline">Cancellation & Refund Policy</a>
-        </div>
-        <div className="flex gap-6 mt-2">
-          <a href="https://instagram.com/notasalaryman" target="_blank" className="hover:opacity-70 transition">
-            <FaInstagram size={22} className="text-white" />
-          </a>
-          <a href="https://tiktok.com/@notasalaryman" target="_blank" className="hover:opacity-70 transition">
-            <FaTiktok size={22} className="text-white" />
-          </a>
-          <a href="https://youtube.com/@notasalaryman" target="_blank" className="hover:opacity-70 transition">
-            <FaYoutube size={22} className="text-white" />
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

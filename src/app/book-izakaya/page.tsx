@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
+import { motion } from "framer-motion";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function BookIzakaya() {
-  const [selectedSize, setSelectedSize] = useState("2");
+  const [groupSize, setGroupSize] = useState("2");
 
-  const links: Record<string, string> = {
+  const calendlyLinks: Record<string, string> = {
     "2": "https://calendly.com/notasalaryman/izakaya?month=2025-09&hide_event_type_details=1&hide_gdpr_banner=1",
     "3": "https://calendly.com/notasalaryman/izakaya-3?month=2025-09&hide_event_type_details=1&hide_gdpr_banner=1",
     "4": "https://calendly.com/notasalaryman/izakaya-4?month=2025-09&hide_event_type_details=1&hide_gdpr_banner=1",
@@ -22,170 +24,114 @@ export default function BookIzakaya() {
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 z-0" />
 
       {/* Header */}
-      <header className="relative z-10 w-full flex items-center justify-between px-6 py-4 bg-black/50 backdrop-blur-sm">
-        <h1 className="text-xl md:text-2xl font-bold text-white tracking-wide">
-          notasalaryman Tokyo Tours
-        </h1>
+      <Header />
 
-        <nav className="flex gap-6 text-white/90 text-sm md:text-base">
-          <Link href="/">Home</Link>
-          <Link href="/book-tokyo">Tokyo</Link>
-          <Link href="/book-kamakura">Kamakura</Link>
-          <Link href="/book-izakaya">Izakaya</Link>
-        </nav>
-      </header>
+      {/* Main Content */}
+      <section className="relative z-10 flex-grow px-4 py-8 sm:px-6 lg:px-12">
+        <div className="mx-auto w-full max-w-6xl flex flex-col lg:flex-row gap-10">
+          {/* Calendar & Booking */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="w-full lg:max-w-2xl"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">
+              Izakaya Night Tour
+            </h2>
 
-      {/* Main */}
-      <section className="relative z-10 flex-grow flex items-start justify-center px-4 py-16">
-        <div className="w-full max-w-6xl flex flex-col lg:flex-row items-start lg:items-start gap-8">
-          {/* Calendar */}
-          <div className="w-full flex justify-center">
-            <div className="w-full max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">
-                Izakaya Night Tour
-              </h2>
-
-              {/* Selector */}
-              <div className="flex justify-center mb-6">
-                <select
-                  value={selectedSize}
-                  onChange={(e) => setSelectedSize(e.target.value)}
-                  className="px-4 py-3 bg-white/90 text-gray-900 rounded-xl shadow-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition text-base font-medium"
-                >
-                  <option value="2">2 People — $135</option>
-                  <option value="3">3 People — $165</option>
-                  <option value="4">4 People — $195</option>
-                </select>
-              </div>
-
-              {/* Calendly iframe */}
-              <div className="w-full">
-                <iframe
-                  title="Calendly — Izakaya Night Tour"
-                  src={links[selectedSize]}
-                  className="w-full h-[600px] rounded-xl shadow-xl bg-white"
-                  frameBorder="0"
-                  allowFullScreen
-                />
-              </div>
-
-              <div className="mt-6 flex justify-center">
-                <Link
-                  href="/"
-                  className="px-6 py-3 bg-white text-black font-semibold rounded-xl hover:bg-gray-200 transition"
-                >
-                  Back to Home
-                </Link>
-              </div>
+            {/* Group size selector */}
+            <div className="mb-6 flex justify-center">
+              <select
+                value={groupSize}
+                onChange={(e) => setGroupSize(e.target.value)}
+                className="px-4 py-3 bg-white/90 text-gray-900 rounded-xl shadow-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition text-base font-medium"
+              >
+                <option value="2">2 People — $135</option>
+                <option value="3">3 People — $165</option>
+                <option value="4">4 People — $195</option>
+              </select>
             </div>
-          </div>
 
-          {/* Right column */}
-          <div className="lg:relative w-full lg:w-96 flex flex-col space-y-6">
+            {/* Calendly iframe */}
+            <div className="w-full">
+              <iframe
+                key={groupSize}
+                title="Calendly — Izakaya Night Tour"
+                src={calendlyLinks[groupSize]}
+                className="w-full h-[600px] rounded-xl shadow-xl bg-white"
+                frameBorder="0"
+                allowFullScreen
+              />
+            </div>
+
+            {/* Back button */}
+            <div className="mt-6 flex justify-center">
+              <Link
+                href="/"
+                className="px-6 py-3 bg-white text-black font-semibold rounded-xl hover:bg-gray-200 transition"
+              >
+                Back to Home
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* About & Includes */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex flex-col gap-6 w-full lg:w-[28rem]"
+          >
             {/* About */}
-            <div className="hidden lg:block lg:top-[15vh]">
-              <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg">
-                <h3 className="text-2xl font-bold mb-3">About the Tour</h3>
-                <p className="text-sm leading-relaxed mb-3">
-                  Come along on a stroll around my favorite neighborhoods where you&apos;ll
-                  discover how locals spend their evening after finishing work.
-                </p>
-                <p className="text-sm leading-relaxed mb-3">
-                  We&apos;ll stop by my favorite spots while strolling around those neighborhoods
-                </p>
-                <ul className="text-sm list-disc list-inside space-y-2 mb-3">
-                  <li>Duration: 3 hours</li>
-                  <li>Price: $135 for 2 people</li>
-                  <li>$30/person after that</li>
-                  <li>Up to 4 people</li>
-                </ul>
-                <p className="text-xs text-gray-600">
-                  For guests 20+ (legal drinking age)
-                </p>
-              </div>
+            <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold mb-3">About the Tour</h3>
+              <p className="text-sm leading-relaxed mb-3">
+                Come along on a stroll around my favorite neighborhoods and see how locals spend their evenings.
+              </p>
+              <p className="text-sm leading-relaxed mb-3">
+                We’ll stop by my favorite spots while exploring hidden gems and backstreets.
+              </p>
+              <ul className="text-sm list-disc list-inside space-y-2 mb-3">
+                <li>Duration: 3 hours</li>
+                <li>Price: $135 for 2 people</li>
+                <li>$30 per additional person</li>
+                <li>Up to 4 people</li>
+              </ul>
+              <p className="text-xs text-gray-600">For guests 20+ (legal drinking age)</p>
+              <p className="text-xs italic text-gray-700">* All prices are in USD</p>
             </div>
 
             {/* Includes / Does Not Include */}
-            <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg w-full lg:w-[40rem]">
-              <div className="grid grid-cols-2 gap-6">
+            <div className="bg-white/85 text-gray-900 p-6 rounded-xl shadow-lg">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold text-lg mb-2">Includes</h4>
                   <ul className="text-sm list-disc list-inside space-y-1">
                     <li>Pick up at your hotel</li>
-                    <li>A private experience you won&apos;t forget</li>
+                    <li>A private experience you won’t forget</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg mb-2">Does Not Include</h4>
                   <ul className="text-sm list-disc list-inside space-y-1">
-                    <li>Food &amp; drinks</li>
+                    <li>Food & drinks</li>
                     <li>Transportation costs</li>
                   </ul>
                 </div>
               </div>
             </div>
-
-            {/* Mobile about */}
-            <div className="lg:hidden mt-6 w-full">
-              <div className="bg-white/85 text-gray-900 p-5 rounded-xl shadow-lg">
-                <h3 className="text-xl font-bold mb-2">About the Tour</h3>
-                <p className="text-sm leading-relaxed">
-                  Discover Tokyo&apos;s backstreets and izakayas. Duration 4
-                  hours.
-                </p>
-              </div>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 w-full py-6 flex flex-col items-center text-white text-sm sm:text-base bg-black/50 backdrop-blur-sm">
-        <p className="mb-2">
-          © {new Date().getFullYear()} notasalaryman Japan Tours
-        </p>
-
-        <div className="flex gap-4 mb-3">
-          <Link href="/disclosure" className="hover:underline">
-            Commerce Disclosure
-          </Link>
-          <span className="text-white/60">|</span>
-          <Link href="/cancellation" className="hover:underline">
-            Cancellation &amp; Refund Policy
-          </Link>
-        </div>
-
-        <div className="flex gap-6 mt-2">
-          <a
-            href="https://instagram.com/notasalaryman"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:opacity-70"
-          >
-            <FaInstagram size={22} className="text-white" />
-          </a>
-          <a
-            href="https://tiktok.com/@notasalaryman"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:opacity-70"
-          >
-            <FaTiktok size={22} className="text-white" />
-          </a>
-          <a
-            href="https://youtube.com/@notasalaryman"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:opacity-70"
-          >
-            <FaYoutube size={22} className="text-white" />
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

@@ -1,82 +1,68 @@
 "use client";
 
-import Link from "next/link";
-import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Cancellation() {
   return (
     <main
       className="relative min-h-screen flex flex-col"
       style={{
-        backgroundImage: "url('/policy.jpg')",
+        backgroundImage: "url('/cancellation-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 z-0" />
 
       {/* Header */}
-      <header className="relative z-10 w-full flex items-center justify-between px-6 py-4 bg-black/50 backdrop-blur-sm">
-        <h1 className="text-xl md:text-2xl font-bold text-white tracking-wide">
-          notasalaryman Tokyo Tours
-        </h1>
+      <Header />
 
-        <nav className="flex gap-6 text-white/90 text-sm md:text-base">
-          <Link href="/">Home</Link>
-          <Link href="/book-tokyo">Tokyo</Link>
-          <Link href="/book-kamakura">Kamakura</Link>
-          <Link href="/book-izakaya">Izakaya</Link>
-        </nav>
-      </header>
+      {/* Main Content */}
+      <section className="relative z-10 flex-grow px-4 py-12 sm:px-6 lg:px-12">
+        <div className="mx-auto w-full max-w-4xl bg-white/90 p-8 rounded-xl shadow-lg text-gray-900">
+          <h2 className="text-3xl font-bold mb-6 text-center">
+            Cancellation & Refund Policy
+          </h2>
 
-      {/* Content */}
-      <section className="relative z-10 flex-grow flex items-start justify-center px-4 py-16">
-        <div className="w-full max-w-4xl bg-white/85 text-gray-900 p-8 rounded-xl shadow-lg">
-          <h2 className="text-3xl font-bold mb-6 text-center">Cancellation & Refund Policy</h2>
+          <p className="mb-4">
+            I understand that plans can change. Below are my guidelines for cancellations and refunds:
+          </p>
 
-          <div className="space-y-4 text-sm">
-            <p>
-              I understand that plans can change.
-            </p>
+          <section className="mb-4">
+            <h3 className="font-semibold text-xl mb-2">Cancellation by Guests</h3>
             <ul className="list-disc list-inside space-y-2">
-              <li>Cancellations more than 7 days before the tour: Full refund.</li>
-              <li>Cancellations between 7 days and 48 hours: 50% refund.</li>
-              <li>Cancellations within 48 hours: No refund.</li>
-              <li>Contact me at tours@notasalaryman.com for any inquiry.</li>
-              <li>Refunds are processed within 7 business days.</li>
+              <li>More than 7 days before the tour: full refund.</li>
+              <li>7 days to 48 hours before the tour: 50% refund.</li>
+              <li>Less than 48 hours: no refund.</li>
             </ul>
+          </section>
 
-          </div>
+          <section className="mb-4">
+            <h3 className="font-semibold text-xl mb-2">Cancellation by the Guide</h3>
+            <p>
+              In the unlikely event that I need to cancel a tour, you will receive a full refund or the option to reschedule at no additional cost.
+            </p>
+          </section>
+
+          <section className="mb-4">
+            <h3 className="font-semibold text-xl mb-2">Refund Process</h3>
+            <p>
+              Refunds will be processed to the original payment method within 5–7 business days after cancellation confirmation.
+            </p>
+          </section>
+
+          <section className="mb-4">
+            <h3 className="font-semibold text-xl mb-2">Contact</h3>
+            <p>
+              For cancellations or questions regarding refunds, please contact: <span className="font-semibold">notasalaryman@gmail.com</span>
+            </p>
+          </section>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 w-full py-6 flex flex-col items-center text-white text-sm sm:text-base bg-black/50 backdrop-blur-sm">
-        <p className="mb-2">© {new Date().getFullYear()} notasalaryman Tokyo Tours</p>
-
-        <div className="flex gap-4 mb-3">
-          <Link href="/disclosure" className="hover:underline">
-            Commerce Disclosure
-          </Link>
-          <span className="text-white/60">|</span>
-          <Link href="/cancellation" className="hover:underline">
-            Cancellation &amp; Refund Policy
-          </Link>
-        </div>
-
-        <div className="flex gap-6 mt-2">
-          <a href="https://instagram.com/notasalaryman" target="_blank" rel="noreferrer" className="hover:opacity-70">
-            <FaInstagram size={22} className="text-white" />
-          </a>
-          <a href="https://tiktok.com/@notasalaryman" target="_blank" rel="noreferrer" className="hover:opacity-70">
-            <FaTiktok size={22} className="text-white" />
-          </a>
-          <a href="https://youtube.com/@notasalaryman" target="_blank" rel="noreferrer" className="hover:opacity-70">
-            <FaYoutube size={22} className="text-white" />
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
