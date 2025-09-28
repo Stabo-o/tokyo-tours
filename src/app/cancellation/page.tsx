@@ -8,7 +8,7 @@ export default function Cancellation() {
     <main
       className="relative min-h-screen flex flex-col"
       style={{
-        backgroundImage: "url('/cancellation-bg.jpg')",
+        backgroundImage: "url('/policy.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
