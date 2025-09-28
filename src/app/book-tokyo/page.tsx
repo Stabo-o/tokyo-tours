@@ -98,10 +98,11 @@ export default function BookTokyo() {
                 Private tour of Tokyo&apos;s must-sees to make sure you don&apos;t miss anything.
               </p>
               <p className="text-sm leading-relaxed mb-3">
-                I&apos;ll take you around the city while teaching you about life here — customs, history, how locals live, what to do and not to do, how to navigate...
+                I&apos;ll take you around the city while teaching you about life here: customs, history, how locals live, what to do and not to do, how to navigate...
               </p>
               <p className="text-sm leading-relaxed mb-3">
-                Any question you might have about Tokyo (or Japan in general), restaurants, neighborhoods, or where to go on your other days in town — I&apos;ll give you all the best recommendations!
+                Any question you might have about Tokyo (or Japan in general), restaurants, neighborhoods, or where to go on your other days in town. 
+                I&apos;ll give you all the best recommendations!
               </p>
               <ul className="text-sm list-disc list-inside space-y-2 mb-3">
                 <li>Duration: 8 hours</li>
