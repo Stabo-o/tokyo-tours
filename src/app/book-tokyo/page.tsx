@@ -106,7 +106,7 @@ export default function BookTokyo() {
               </p>
               <ul className="text-sm list-disc list-inside space-y-2 mb-3">
                 <li>Duration: 8 hours</li>
-                <li>Price: $265 for 2 people</li>
+                <li>Price: $275 for 2 people</li>
                 <li>$20 per extra person</li>
                 <li>
                   For groups over 6 people, contact <span className="font-semibold">notasalaryman@gmail.com</span>
