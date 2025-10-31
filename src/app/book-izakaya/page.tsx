@@ -51,9 +51,9 @@ export default function BookIzakaya() {
                 onChange={(e) => setGroupSize(e.target.value)}
                 className="px-4 py-3 bg-white/90 text-gray-900 rounded-xl shadow-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition text-base font-medium"
               >
-                <option value="2">2 People — $135</option>
-                <option value="3">3 People — $165</option>
-                <option value="4">4 People — $195</option>
+                <option value="2">2 People — $175</option>
+                <option value="3">3 People — $190</option>
+                <option value="4">4 People — $210</option>
               </select>
             </div>
 
@@ -99,8 +99,8 @@ export default function BookIzakaya() {
               </p>
               <ul className="text-sm list-disc list-inside space-y-2 mb-3">
                 <li>Duration: 3 hours</li>
-                <li>Price: $135 for 2 people</li>
-                <li>$30 per additional person</li>
+                <li>Price: $175 for 2 people</li>
+                <li>$15 per additional person</li>
                 <li>Up to 4 people</li>
               </ul>
               <p className="text-xs text-gray-600">For guests 20+ (legal drinking age)</p>

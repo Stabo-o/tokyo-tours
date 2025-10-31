@@ -55,10 +55,10 @@ export default function BookKamakura() {
                 className="w-full sm:w-auto px-4 py-3 bg-black/70 text-white rounded-xl shadow-md border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 text-base"
               >
                 <option value="2">2 People — $275</option>
-                <option value="3">3 People — $305</option>
-                <option value="4">4 People — $335</option>
-                <option value="5">5 People — $365</option>
-                <option value="6">6 People — $395</option>
+                <option value="3">3 People — $295</option>
+                <option value="4">4 People — $315</option>
+                <option value="5">5 People — $335</option>
+                <option value="6">6 People — $355</option>
               </select>
             </div>
 
@@ -103,7 +103,7 @@ export default function BookKamakura() {
               <ul className="text-base list-disc list-inside space-y-2">
                 <li>Duration: 8 hours</li>
                 <li>Price: $275 for 2 people</li>
-                <li>$30 per additional person</li>
+                <li>$20 per additional person</li>
                 <li>For groups over 6 people contact me at notasalaryman@gmail.com</li>
               </ul>
               <p className="text-xs italic text-gray-700">* All prices are in USD</p>
