@@ -54,11 +54,11 @@ export default function BookTokyo() {
                 onChange={(e) => setGroupSize(e.target.value)}
                 className="bg-black/70 text-white px-5 py-3 rounded-xl shadow-lg border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 transition"
               >
-                <option value="2">2 People — $275</option>
-                <option value="3">3 People — $295</option>
-                <option value="4">4 People — $315</option>
-                <option value="5">5 People — $335</option>
-                <option value="6">6 People — $355</option>
+                <option value="2">2 People — $250</option>
+                <option value="3">3 People — $270</option>
+                <option value="4">4 People — $290</option>
+                <option value="5">5 People — $310</option>
+                <option value="6">6 People — $330</option>
               </select>
             </div>
 
@@ -106,7 +106,7 @@ export default function BookTokyo() {
               </p>
               <ul className="text-sm list-disc list-inside space-y-2 mb-3">
                 <li>Duration: 8 hours</li>
-                <li>Price: $275 for 2 people</li>
+                <li>Price: $250 for 2 people</li>
                 <li>$20 per extra person</li>
                 <li>
                   For groups over 6 people, contact <span className="font-semibold">notasalaryman@gmail.com</span>

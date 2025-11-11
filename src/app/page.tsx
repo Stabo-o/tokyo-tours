@@ -10,7 +10,7 @@ const tours = [
   {
     name: "Tokyo Private Tour",
     description: "Let me take you to Tokyo must-sees so you're sure not to miss anything.",
-    price: "From $275 / 8 hours",
+    price: "From $250 / 8 hours",
     link: "/book-tokyo",
     image: "/tokyo-tour.jpg",
   },
