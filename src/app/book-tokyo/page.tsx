@@ -11,10 +11,7 @@ export default function BookTokyo() {
 
   const calendlyLinks: Record<string, string> = {
     "2": "https://calendly.com/notasalaryman/tokyo?hide_event_type_details=1&hide_gdpr_banner=1",
-    "3": "https://calendly.com/notasalaryman/tokyo-3?hide_event_type_details=1&hide_gdpr_banner=1",
-    "4": "https://calendly.com/notasalaryman/tokyo-4?hide_event_type_details=1&hide_gdpr_banner=1",
-    "5": "https://calendly.com/notasalaryman/tokyo-5?hide_event_type_details=1&hide_gdpr_banner=1",
-    "6": "https://calendly.com/notasalaryman/tokyo-6?hide_event_type_details=1&hide_gdpr_banner=1",
+  
   };
 
   return (
@@ -46,21 +43,7 @@ export default function BookTokyo() {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
               Tokyo Private Tour
             </h2>
-
-            {/* Group size selector */}
-            <div className="mb-6 flex justify-center">
-              <select
-                value={groupSize}
-                onChange={(e) => setGroupSize(e.target.value)}
-                className="bg-black/70 text-white px-5 py-3 rounded-xl shadow-lg border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 transition"
-              >
-                <option value="2">2 People — $250</option>
-                <option value="3">3 People — $270</option>
-                <option value="4">4 People — $290</option>
-                <option value="5">5 People — $310</option>
-                <option value="6">6 People — $330</option>
-              </select>
-            </div>
+            
 
             {/* Calendly iframe */}
             <iframe
@@ -106,10 +89,9 @@ export default function BookTokyo() {
               </p>
               <ul className="text-sm list-disc list-inside space-y-2 mb-3">
                 <li>Duration: 8 hours</li>
-                <li>Price: $250 for 2 people</li>
-                <li>$20 per extra person</li>
+                <li>Price: $250 up to 5 people</li>
                 <li>
-                  For groups over 6 people, contact <span className="font-semibold">notasalaryman@gmail.com</span>
+                  For groups over 5 people, contact <span className="font-semibold">notasalaryman@gmail.com</span>
                 </li>
               </ul>
               <p className="text-xs italic text-gray-700">* All prices are in USD</p>

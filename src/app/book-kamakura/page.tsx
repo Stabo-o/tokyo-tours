@@ -11,10 +11,7 @@ export default function BookKamakura() {
 
   const calendlyLinks: Record<string, string> = {
     "2": "https://calendly.com/notasalaryman/kamakura?hide_event_type_details=1&hide_gdpr_banner=1",
-    "3": "https://calendly.com/notasalaryman/kamakura-3?hide_event_type_details=1&hide_gdpr_banner=1",
-    "4": "https://calendly.com/notasalaryman/kamakura-4?hide_event_type_details=1&hide_gdpr_banner=1",
-    "5": "https://calendly.com/notasalaryman/kamakura-5?hide_event_type_details=1&hide_gdpr_banner=1",
-    "6": "https://calendly.com/notasalaryman/kamakura-6?hide_event_type_details=1&hide_gdpr_banner=1",
+    
   };
 
   return (
@@ -46,21 +43,6 @@ export default function BookKamakura() {
             <h2 className="text-2xl sm:text-3xl font-bold text-white text-center">
               Kamakura Private Tour
             </h2>
-
-            {/* Group selector */}
-            <div className="flex justify-center">
-              <select
-                value={groupSize}
-                onChange={(e) => setGroupSize(e.target.value)}
-                className="w-full sm:w-auto px-4 py-3 bg-black/70 text-white rounded-xl shadow-md border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 text-base"
-              >
-                <option value="2">2 People — $275</option>
-                <option value="3">3 People — $295</option>
-                <option value="4">4 People — $315</option>
-                <option value="5">5 People — $335</option>
-                <option value="6">6 People — $355</option>
-              </select>
-            </div>
 
             {/* Calendly iframe */}
             <iframe
@@ -102,9 +84,8 @@ export default function BookKamakura() {
               </p>
               <ul className="text-base list-disc list-inside space-y-2">
                 <li>Duration: 8 hours</li>
-                <li>Price: $275 for 2 people</li>
-                <li>$20 per additional person</li>
-                <li>For groups over 6 people contact me at notasalaryman@gmail.com</li>
+                <li>Price: $275 up to 5 people</li>
+                <li>For groups over 5 people, contact <span className="font-semibold">notasalaryman@gmail.com</span></li>
               </ul>
               <p className="text-xs italic text-gray-700">* All prices are in USD</p>
             </div>

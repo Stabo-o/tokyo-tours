@@ -11,8 +11,7 @@ export default function BookIzakaya() {
 
   const calendlyLinks: Record<string, string> = {
     "2": "https://calendly.com/notasalaryman/izakaya?month=2025-09&hide_event_type_details=1&hide_gdpr_banner=1",
-    "3": "https://calendly.com/notasalaryman/izakaya-3?month=2025-09&hide_event_type_details=1&hide_gdpr_banner=1",
-    "4": "https://calendly.com/notasalaryman/izakaya-4?month=2025-09&hide_event_type_details=1&hide_gdpr_banner=1",
+
   };
 
   return (
@@ -44,18 +43,7 @@ export default function BookIzakaya() {
               Izakaya Night Tour
             </h2>
 
-            {/* Group size selector */}
-            <div className="mb-6 flex justify-center">
-              <select
-                value={groupSize}
-                onChange={(e) => setGroupSize(e.target.value)}
-                className="px-4 py-3 bg-white/90 text-gray-900 rounded-xl shadow-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition text-base font-medium"
-              >
-                <option value="2">2 People — $175</option>
-                <option value="3">3 People — $190</option>
-                <option value="4">4 People — $210</option>
-              </select>
-            </div>
+
 
             {/* Calendly iframe */}
             <div className="w-full">
@@ -95,13 +83,11 @@ export default function BookIzakaya() {
                 Come along on a stroll around my favorite neighborhoods and see how locals spend their evenings.
               </p>
               <p className="text-sm leading-relaxed mb-3">
-                We’ll stop by my favorite spots while exploring hidden gems and backstreets.
+                We&apos;ll stop by my favorite spots while exploring hidden gems and backstreets.
               </p>
               <ul className="text-sm list-disc list-inside space-y-2 mb-3">
                 <li>Duration: 3 hours</li>
-                <li>Price: $175 for 2 people</li>
-                <li>$15 per additional person</li>
-                <li>Up to 4 people</li>
+                <li>Price: $175 up to 4 people</li>
               </ul>
               <p className="text-xs text-gray-600">For guests 20+ (legal drinking age)</p>
               <p className="text-xs italic text-gray-700">* All prices are in USD</p>
@@ -114,7 +100,7 @@ export default function BookIzakaya() {
                   <h4 className="font-semibold text-lg mb-2">Includes</h4>
                   <ul className="text-sm list-disc list-inside space-y-1">
                     <li>Pick up at your hotel</li>
-                    <li>A private experience you won’t forget</li>
+                    <li>A private experience you won&apos;t forget</li>
                   </ul>
                 </div>
                 <div>
